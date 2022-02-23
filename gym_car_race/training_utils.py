@@ -49,7 +49,7 @@ def run_experiment(*args, timesteps=10000, render=True, trials=1, run_after_trai
     arguments (*args) each being a function that takes in an integer
     representing the number of training timesteps as a parameter and returns a
     tuple of length 3 containing the model to be run, the environment to be run
-    on, and a description of the test. It is recomended to use the testing api
+    on, and a description of the test. It is recommended to use the testing api
     to help with this. (see "testing" function
     below)
 

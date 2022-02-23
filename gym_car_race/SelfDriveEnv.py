@@ -525,7 +525,8 @@ class Car:
             self.speed += self.acceleration
         elif accel == self.DECELERATE and self.speed > self.acceleration:
             self.speed -= self.acceleration
-        if rot == self.ACCEL_LEFT and self.rotation < self.max_turn_rate:            
+        if rot == self.ACCEL_LEFT and self.rotation < self.max_turn_rate:
+            print(self.rotation, self.max_turn_rate)
             self.rotation += self.turn_rate
         elif rot == self.ACCEL_RIGHT and self.rotation > -self.max_turn_rate:
             self.rotation -= self.turn_rate

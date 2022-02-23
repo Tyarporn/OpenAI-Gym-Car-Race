@@ -6,6 +6,7 @@ the repo: https://github.com/Taaseen-Ali/OpenAI-Gym-Car-Race
 """
 
 # Default car settings
+# potato_peeps_config_v1
 cfg = {
     "car": {
         # Initial defaults

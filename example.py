@@ -12,7 +12,7 @@ from gym_car_race.config import cfg
 # the model that you want to load/save
 
 model_dir = "./models/"
-model_name = "model1"
+model_name = "contest_model_v4_inc_turn_rate"
 os.makedirs(model_dir, exist_ok=True)
 
 # Set up the environment using the values found in configs
@@ -29,13 +29,13 @@ env.add_car(car)
 # Uncomment one of the following depending on what you'd like to do
 
 # A. Use an existing model
-# model = PPO.load(model_dir + model_name)
+model = PPO.load(model_dir + model_name)
 
 # B. Create and train a new model
-timesteps = 10000
-model = PPO('MlpPolicy', env, tensorboard_log="./ppo/", verbose=1)
-model.learn(total_timesteps=timesteps, callback=TensorboardCallback()) 
-model.save(model_dir + model_name)
+# timesteps = 50000
+# model = PPO('MlpPolicy', env, tensorboard_log="./ppo/", verbose=1)
+# model.learn(total_timesteps=timesteps, callback=TensorboardCallback())
+# model.save(model_dir + model_name)
 
 # Reset the env
 
